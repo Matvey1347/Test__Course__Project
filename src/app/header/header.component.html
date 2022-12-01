@@ -1,0 +1,27 @@
+<nav>
+  <ul class="links-wrap">
+    <li><img src="/assets/images/logo.svg" alt="logo"></li>
+    <li><a class="text" routerLink="">Services</a></li>
+    <li><a class="text" routerLink="">Portfolio</a></li>
+    <li><a class="text" routerLink="">Pricing</a></li>
+  </ul>
+
+  <ul class="options-wrap">
+    <li><a class="text" href="tel:+3035550105">(303) 555-0105</a></li>
+    <li><span class="text">{{ language }}</span></li>
+    <li 
+      class="select-wrap"
+      #select
+    >
+      <button (click)="openedSelect = !openedSelect" class="arrow"></button>
+      <div 
+        *ngIf="openedSelect"
+        class="select-wrap__options"
+        #optionsWrap
+      >
+        <div (click)="language = 'EN'">EN</div>
+        <div (click)="language = 'UN'">UN</div>
+      </div>
+    </li>
+  </ul>
+</nav>
