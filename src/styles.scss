@@ -108,11 +108,15 @@ h6 {
   display: block;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.18;
   color: #352C2C;
 }
 
 .container {
   max-width: 81.25%;
   margin: 0 auto;
+}
+
+.active {
+  color: #be9595 !important;
 }

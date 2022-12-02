@@ -4,11 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { PortfolioComponent } from './pages/portfolio/portfolio.component';
+import { PricingComponent } from './pages/pricing/pricing.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    ServicesComponent,
+    PortfolioComponent,
+    PricingComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

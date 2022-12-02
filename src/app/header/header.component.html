@@ -1,27 +1,43 @@
-<nav>
-  <ul class="links-wrap">
-    <li><img src="/assets/images/logo.svg" alt="logo"></li>
-    <li><a class="text" routerLink="">Services</a></li>
-    <li><a class="text" routerLink="">Portfolio</a></li>
-    <li><a class="text" routerLink="">Pricing</a></li>
-  </ul>
+<header>
+  <div class="menu__body" [class._active]="openedMenuBurger">
+    <nav>
+      <ul class="links-wrap">
+        <li><a routerLink="/"><img src="/assets/images/logo.svg" alt="logo"></a></li>
+        <li><a class="text" routerLink="/services" routerLinkActive="active">Services</a></li>
+        <li><a class="text" routerLink="/portfolio" routerLinkActive="active">Portfolio</a></li>
+        <li><a class="text" routerLink="/pricing" routerLinkActive="active">Pricing</a></li>
+      </ul>
+    </nav>
+  
+    <ul class="options-wrap">
+      <li><a class="text phone-link" href="tel:+3035550105">(303) 555-0105</a></li>
+      <li class="language-wrap" #select>
+        <span class="text">{{ language }}</span>
+        <div class="select-wrap">
+          <button 
+            (click)="openedSelect = !openedSelect" 
+            class="arrow-btn"
+            [class.arrow-btn__rotate]="openedSelect"
+          ></button>
+          <div *ngIf="openedSelect" class="select-wrap__options" #optionsWrap>
+            <div (click)="language = 'EN'">EN</div>
+            <div (click)="language = 'UN'">UN</div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- MENU BURGER -->
 
-  <ul class="options-wrap">
-    <li><a class="text" href="tel:+3035550105">(303) 555-0105</a></li>
-    <li><span class="text">{{ language }}</span></li>
-    <li 
-      class="select-wrap"
-      #select
+ <div class="menu__burger-wrap">
+    <a routerLink="/"><img src="/assets/images/logo.svg" alt="logo"></a>
+    <div 
+      (click)="openedMenuBurger = !openedMenuBurger" 
+      [class._active]="openedMenuBurger" 
+      class="menu__icon"
     >
-      <button (click)="openedSelect = !openedSelect" class="arrow"></button>
-      <div 
-        *ngIf="openedSelect"
-        class="select-wrap__options"
-        #optionsWrap
-      >
-        <div (click)="language = 'EN'">EN</div>
-        <div (click)="language = 'UN'">UN</div>
-      </div>
-    </li>
-  </ul>
-</nav>
+      <span></span>
+    </div>
+ </div>
+
+</header>
