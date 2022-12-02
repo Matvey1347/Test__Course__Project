@@ -1,0 +1,137 @@
+footer {
+  background-color: #F4F4F4;
+  padding: 94px 0;
+}
+
+.columns-wrap {
+  display: flex;
+
+  & .column {
+    flex: 1 1 30%;
+
+    &.information {
+      margin-right: 40px;
+      flex: 1 1 40%;
+
+      & .information__header {
+        margin-bottom: 60px;
+
+        & .logo {
+          margin-right: 10px;
+        }
+
+        & .social-networks {
+          display: none;
+        }
+      }
+    }
+
+    &.navigation {
+      & .text {
+        font-size: 14px;
+      }
+
+      & h2 {
+        margin-bottom: 24px;
+      }
+
+      & ul {
+        height: 63%;
+        flex: 1 1 auto;
+        margin-bottom: 51px;
+        display: flex;
+        flex-direction: column;
+
+        & li {
+          flex: 1 1 20%;
+        }
+      }
+    }
+
+    &.contacts {
+      & h2 {
+        margin-bottom: 24px;
+      }
+
+      & .contacts__name {
+        font-family: 'Conv_Gilroy-Light';
+        font-size: 16px;
+        line-height: 150%;
+        color: #878787;
+        margin-bottom: 14px;
+      }
+
+      & .contacts__value {
+        font-family: 'Conv_Gilroy-Light';
+        font-size: 14px;
+        line-height: 150%;
+        color: #161616;
+      }
+
+      ul {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 100%;
+
+        li {
+          flex: 1 1 33.333%;
+        }
+      }
+    }
+
+    & a.text {
+      display: inline-block;
+    }
+  }
+}
+
+.text-madeBy {
+  display: none;
+}
+
+.information-text {
+  margin-bottom: 96px;
+  line-height: 1.7;
+}
+
+.social-networks {
+  & a:not(a:last-child) {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  footer {
+    padding: 60px 0 35px 0;
+  }
+
+  .columns-wrap {
+    flex-direction: column;
+  }
+
+  .information {
+    margin: 0 !important;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      & .social-networks {
+        display: block !important;
+      }
+    }
+
+    .text {
+      display: none;
+    }
+
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  .text-madeBy {
+    display: block;
+    margin-top: 77px;
+  }
+}

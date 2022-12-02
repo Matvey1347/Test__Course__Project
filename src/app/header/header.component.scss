@@ -21,6 +21,10 @@ nav {
 
 .links-wrap {
   justify-content: space-between;
+
+  & .text {
+    color: #352C2C;
+  }
 }
 
 .options-wrap {
@@ -305,5 +309,5 @@ nav {
 @media (max-width: 400px) {
   .phone-link {
     font-size: 18px !important;
-  } 
+  }
 }

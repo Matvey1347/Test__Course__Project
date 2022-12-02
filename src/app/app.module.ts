@@ -8,6 +8,7 @@ import { ServicesComponent } from './pages/services/services.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ServicesComponent,
     PortfolioComponent,
     PricingComponent,
-    DashboardComponent
+    DashboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
