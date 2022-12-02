@@ -110,6 +110,9 @@ h6 {
   font-size: 16px;
   line-height: 1.18;
   color: #352C2C;
+  @media (max-width: 1065px) {
+    font-size: 14px;
+  }
 }
 
 .container {
@@ -119,4 +122,45 @@ h6 {
 
 .active {
   color: #be9595 !important;
+}
+
+h1 {
+  font-family: 'Conv_BN Chester Regular';
+  font-weight: 400;
+  font-size: 66px;
+  line-height: 96%;
+  letter-spacing: 0.01em;
+  color: #3D3737;
+  @media (max-width: 1400px) {
+    font-size: 50px;
+    @media (max-width: 1065px) {
+      font-size: 40px;
+    }
+  }
+}
+
+.btn {
+  background-color: transparent;
+  padding: 12px 34px;
+  border: 2px solid #D3A265;
+  border-radius: 8px;
+
+  & span {
+    font-family: 'Conv_Gilroy-ExtraBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    color: #161616;
+  }
+
+  &:hover {
+    background-color: #D3A265;
+
+    & span {
+      color: #fff;
+    }
+  }
 }
